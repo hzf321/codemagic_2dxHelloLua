@@ -11,8 +11,8 @@ workflows:
         bundle_identifier: com.yjrxpvdwcl.zvqchjnx
       vars:
         BUNDLE_ID: "com.yjrxpvdwcl.zvqchjnx"
-        XCODE_WORKSPACE: "MyGame.xcworkspace"
-        XCODE_SCHEME: "MyGame"
+        XCODE_WORKSPACE: "MyGame-mobile.xcworkspace"
+        XCODE_SCHEME: "MyGame-mobile"
         APP_STORE_APPLE_ID: 6499254490
       xcode: latest # <-- set to specific version e.g. 14.3, 15.0 to avoid unexpected updates.
       cocoapods: default
