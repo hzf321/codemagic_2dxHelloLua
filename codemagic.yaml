@@ -11,7 +11,7 @@ workflows:
         bundle_identifier: com.yjrxpvdwcl.zvqchjnx
       vars:
         BUNDLE_ID: "com.yjrxpvdwcl.zvqchjnx"
-        XCODE_WORKSPACE: "MyGame-mobile.xcworkspace"
+        XCODE_WORKSPACE: "MyGame.xcworkspace"
         XCODE_SCHEME: "MyGame-mobile"
         APP_STORE_APPLE_ID: 6499254490
       xcode: latest # <-- set to specific version e.g. 14.3, 15.0 to avoid unexpected updates.
@@ -26,7 +26,7 @@ workflows:
         script: | 
           cd proj.ios_mac
           LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
-          agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
+          agvtool new-version -all $(($LATEST_BUILD_NUMBER + 6))
       - name: Build ipa for distribution
         script: | 
           xcode-project build-ipa \
